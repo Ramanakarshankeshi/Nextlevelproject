@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"dir="ltr>
+    <head>
+        <meta charset="utf=8">
+        <title>Student-Login Success!!</title>
+    </head>
+    <body bgcolor="LightYellow">
+        {%if sentdata%}
+            <h1>Thanks for Login..!!</h1>
+            <hr />
+            <h2>Welcome : {{ username  }}</h2>
+            <hr/>
+            <h3>Here is your Student-Data & Records!!!</h3>
+            <p>...RollNo=1001...</p>
+            <p>...Name=Bharath...</p>
+            <p>...Marks=95...</p>
+            <p>...Total=985...</p>
+            <p>...Average=55...</p>
+        {% else %}
+            <a href="/studentloginpage/">Go-to Login-Page...</a>
+        {%endif%}
+
+    </body>
+ </html>

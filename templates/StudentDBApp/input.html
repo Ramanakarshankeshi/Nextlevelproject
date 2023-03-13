@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{%static "css/studentform.css"%}">
+        <title>Student Form-Input</title>
+    </head>
+    <body>
+    <h1>Student Registration Form</h1>
+    <hr />
+    <div align="center">
+        {% if form1 %}
+            <p>{{ msg }}</p>
+            <form action="/studinputverifyview/" method="post">
+                {{form1.as_p}}
+                {%csrf_token%}
+                <input type="submit" value="Submit">
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>
